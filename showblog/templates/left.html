@@ -1,0 +1,17 @@
+{% extends 'bootstrapbase.html' %}
+{% block cssblock %}
+    <style>
+        li {
+            color: #0f0f0f;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+      <div class="list-group">
+      <h3 class="list-group-item-heading text-center">OOP</h3>
+          <br>
+    {% for book in books %}
+        <a href="#" class="list-group-item active">{{ book.title }}</a>
+    {% endfor %}
+      </div>
+{% endblock %}

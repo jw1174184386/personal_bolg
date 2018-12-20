@@ -1,0 +1,45 @@
+{% extends 'bootstrapbase.html' %}
+{% block title %}
+    风城浪子
+{% endblock %}
+
+{% block cssblock %}
+    <style>
+        html,body,#ctr{
+            height: 100%;
+        }
+        #header_div{
+            height: 10%;
+        }
+        #main_div{
+            height: 150%;
+        }
+        #footer_div{
+            height: 10%;
+        }
+        #main_div div{
+            height: 100%;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid" id="ctr">
+        <div id="header_div" class="bg-success">
+            {% include 'header.html' %}
+        </div>
+        <div id="main_div">
+            <div class="col-lg-2 col-md-2 hidden-xs">
+               {% include 'left.html' %}
+            </div>
+            <div class="bg-info col-lg-10 col-md-10 col-xs-12">
+                {% block main_right %}
+
+                {% endblock %}
+            </div>
+        </div>
+        <div id="footer_div" class="bg-danger">
+            {% include 'footer.html' %}
+        </div>
+    </div>
+{% endblock %}
